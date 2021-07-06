@@ -25,5 +25,8 @@ public class Dictionary {
 		return returnString;
 	}
 	
+	public void put (String input) {
+		
+	}
 
 }
