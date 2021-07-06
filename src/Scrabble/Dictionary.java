@@ -1,5 +1,16 @@
 package Scrabble;
 
-public class Dictionary {
+import java.io.File;
+import java.util.Scanner;
 
+public class Dictionary {
+	public static void main(String[] args) {
+		File f = new File("");
+		 Scanner myReader = new Scanner(f);
+	      while (myReader.hasNextLine()) {
+	        String data = myReader.nextLine();
+	        System.out.println(data);
+	      }
+	      myReader.close();
+	}
 }
