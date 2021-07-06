@@ -5,15 +5,20 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 
 public class Dictionary {
+	File f;
+	int wordsCounter = 0;
+	
 	public Dictionary() throws FileNotFoundException {
-	File f = new File("");
+	f = new File("");
 	Scanner myReader = new Scanner(f);
 	while(myReader.hasNextLine())
 		{
 		String data = myReader.nextLine();
+		wordsCounter += 1;
 		System.out.println(data);
 		}
 	myReader.close();
+	System.out.println("There are " + wordsCounter + " words stored in the list.");
 	}
 	
 	public String getPermutation(String input) {
