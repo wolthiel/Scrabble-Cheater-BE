@@ -1,5 +1,7 @@
 package Scrabble;
 
-public class Dictionary {
+import java.io.FileNotFoundException;
 
+public class Dictionary {
+	
 }
