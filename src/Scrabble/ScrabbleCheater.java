@@ -12,7 +12,6 @@ public class ScrabbleCheater {
 		
 		System.out.println(dictionary.getPermutation("adeelrt"));
 		System.out.println(dictionary.longestChain());
-		System.out.println(dictionary.longestChain());
 		System.out.println(dictionary.longestChain().size());
 	}
 	

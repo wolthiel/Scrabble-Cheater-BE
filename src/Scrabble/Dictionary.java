@@ -16,6 +16,14 @@ public class Dictionary {
 	myReader.close();
 	}
 	
+	public String getPermutation(String input) {
+		return "hallo";
+	}
+	
+	public String[] longestChain() {
+		String[] returnString = {"Hallo", "Du da!"};
+		return returnString;
+	}
 	
 
 }
