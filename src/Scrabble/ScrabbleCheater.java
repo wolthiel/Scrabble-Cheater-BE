@@ -12,7 +12,7 @@ public class ScrabbleCheater {
 		
 		System.out.println(dictionary.getPermutation("adeelrt"));
 		System.out.println(dictionary.longestChain());
-		System.out.println(dictionary.longestChain().size());
+		System.out.println(dictionary.longestChain().length);
 	}
 	
 	private static String[] parseWords() {
