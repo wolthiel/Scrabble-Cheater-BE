@@ -23,6 +23,18 @@ public class HashTable {
 		return returnArray;
 	}
 	
+	public String[] getLongestList() {
+		String[] superkey = {""};
+		int[] superlength = {0};
+		hm.forEach((k, v) -> {
+			if (v.size() > superlength[0]) {
+				superkey[0] = k;
+				superlength[0] = v.size();
+			}
+		});
+		return get(superkey[0]);
+	}
+	
 	private void searchList(String key, String object) {
 		LinkedList list = hm.get(key);
 		if (!list.contains(object)) {
