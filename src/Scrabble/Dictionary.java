@@ -22,13 +22,22 @@ public class Dictionary {
 		wordsCounter += 1;		
 		System.out.println(data);		
 		}
+	}
 	
+	public Dictionary() throws FileNotFoundException {
+	f = new File("");
+	Scanner myReader = new Scanner(f);
+	while(myReader.hasNextLine())
+		{
+		String data = myReader.nextLine();
+		wordsCounter += 1;
+		System.out.println(data);
+		}
 	myReader.close();
 	System.out.println("There are " + wordsCounter + " words stored in the list.");
 	}
 	
 	public String getPermutation(String input) {
-		
 		return "hallo";
 	}
 	
@@ -58,6 +67,22 @@ public class Dictionary {
 			
 			return hashValue;
 		}
-
+		
+	public static int getHashValue (String key) {
+		//wenn die Normalisierungsmethode bereits geschrieben ist, 
+		// kann diese gelöscht werden
+		char[] letters = key.toUpperCase().toCharArray();
+		Arrays.sort(letters);
+		
+		
+		// converts key in int -> normalizes the value of the chars
+		int hashValue = 0;
+		for (int i =0; i < letters.length; i++) {
+			// 31 is prime number -> https://horstmann.com/htw/2021/info2/day17/#(11)
+			hashValue = 31 * hashValue + letters[i];
+		}
+		
+		return hashValue;
+	}
 
 }
