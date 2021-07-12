@@ -11,8 +11,6 @@ public class Dictionary {
 	int wordsCounter = 0;
 	public static void main(String[] args) throws FileNotFoundException {
 		Dictionary d = new Dictionary();
-		String test = "CDA";
-		System.out.println(d.createKey(test));
 	}
 	
 	public Dictionary() throws FileNotFoundException {
