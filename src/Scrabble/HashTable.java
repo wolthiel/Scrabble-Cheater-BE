@@ -48,8 +48,5 @@ public class HashTable {
 		list.add(object);
 		hm.put(key, list);
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 403f761c4b6e0a1e76acbec4b5ab7f5389c892bf
+
