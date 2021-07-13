@@ -49,28 +49,10 @@ public class Dictionary {
 	public void put (String input) {
 		
 	}
-	
-	// hash function
-		public static int getHashValue (String key) {
-			//wenn die Normalisierungsmethode bereits geschrieben ist, 
-			// kann diese gelöscht werden
-			char[] letters = key.toUpperCase().toCharArray();
-			Arrays.sort(letters);
-			
-			
-			// converts key in int -> normalizes the value of the chars
-			int hashValue = 0;
-			for (int i =0; i < letters.length; i++) {
-				// 31 is prime number -> https://horstmann.com/htw/2021/info2/day17/#(11)
-				hashValue = 31 * hashValue + letters[i];
-			}
-			
-			return hashValue;
-		}
 		
 	public static int getHashValue (String key) {
 		//wenn die Normalisierungsmethode bereits geschrieben ist, 
-		// kann diese gelöscht werden
+		// kann diese gelÃ¶scht werden
 		char[] letters = key.toUpperCase().toCharArray();
 		Arrays.sort(letters);
 		
