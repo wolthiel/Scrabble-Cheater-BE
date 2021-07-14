@@ -18,7 +18,7 @@ public class HashTable {
 	}
 	
 	public String[] get(String key) {
-		LinkedList list = hm.get(key);
+		LinkedList<String> list = hm.get(key);
 		String[] returnArray = (String[]) list.toArray();
 		return returnArray;
 	}
@@ -36,7 +36,7 @@ public class HashTable {
 	}
 	
 	private void searchList(String key, String object) {
-		LinkedList list = hm.get(key);
+		LinkedList<String> list = hm.get(key);
 		if (!list.contains(object)) {
 			list.addLast(object);
 		}
@@ -44,7 +44,7 @@ public class HashTable {
 	}
 	
 	private void createEntry(String key, String object) {
-		LinkedList list = new LinkedList();
+		LinkedList<String> list = new LinkedList<String>();
 		list.add(object);
 		hm.put(key, list);
 	}
