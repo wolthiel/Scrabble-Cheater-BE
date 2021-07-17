@@ -16,7 +16,7 @@ public class Dictionary {
 	}
 	
 	public Dictionary() throws FileNotFoundException {
-	f = new File("C:\\Users\\thiel\\Downloads\\code\\day4\\code\\dictwords.txt");
+	f = new File("src\\Scrabble\\dictwords.txt");
 	Scanner myReader = new Scanner(f);
 	ht = new HashTable(100000007);
 	while(myReader.hasNextLine())
