@@ -1,6 +1,7 @@
 package Scrabble;
 
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 
 public class ScrabbleCheater {
 	public static void main(String[] args) throws FileNotFoundException {
@@ -10,9 +11,10 @@ public class ScrabbleCheater {
 			dictionary.put(name);
 		}
 		
+		System.out.println(Arrays.toString( dictionary.lookup("Actress")));
 //		System.out.println(dictionary.getPermutation("adeelrt"));
-		System.out.println(dictionary.longestChain());
-		System.out.println(dictionary.longestChain().length);
+//		System.out.println(dictionary.longestChain());
+//		System.out.println(dictionary.longestChain().length);
 	}
 	
 	private static String[] parseWords() {
