@@ -16,17 +16,19 @@ public class Dictionary {
 	}
 	
 	public Dictionary() throws FileNotFoundException {
-	f = new File("");
+	f = new File("C:\\Users\\thiel\\Downloads\\code\\day4\\code\\dictwords.txt");
 	Scanner myReader = new Scanner(f);
+	ht = new HashTable(13513);
 	while(myReader.hasNextLine())
 		{
 		String data = myReader.nextLine();
 		wordsCounter += 1;
-		System.out.println(data);
+		//System.out.println(data);
+		put(data);
 		}
 	myReader.close();
-	ht = new HashTable(wordsCounter);
 	System.out.println("There are " + wordsCounter + " words stored in the list.");
+	System.out.println(Arrays.toString( lookup("Ball")));
 	}
 	
 	public String[] longestChain() {
@@ -35,7 +37,7 @@ public class Dictionary {
 	}
 	
 	public void put (String input) {
-		
+		ht.put(getHashValue(input), input);
 	}
 	
 	public String[] lookup (String input) {

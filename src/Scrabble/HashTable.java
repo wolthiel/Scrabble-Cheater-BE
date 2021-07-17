@@ -20,8 +20,14 @@ public class HashTable {
 	}
 	
 	public String[] get(Integer key) {
+		// Help through https://www.tutorialspoint.com/how-to-convert-linkedlist-to-array-in-java
 		LinkedList<String> list = hm[index(key)];
-		String[] returnArray = (String[]) list.toArray();
+		Object[] objectArray = list.toArray();
+		int length = objectArray.length;
+		String[] returnArray = new String[length];
+		for (int i = 0; i < length; i++) {
+			returnArray[i] = (String) objectArray[i];
+		}
 		return returnArray;
 	}
 	
