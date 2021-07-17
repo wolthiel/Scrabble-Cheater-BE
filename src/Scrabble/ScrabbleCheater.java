@@ -10,7 +10,7 @@ public class ScrabbleCheater {
 			dictionary.put(name);
 		}
 		
-		System.out.println(dictionary.getPermutation("adeelrt"));
+//		System.out.println(dictionary.getPermutation("adeelrt"));
 		System.out.println(dictionary.longestChain());
 		System.out.println(dictionary.longestChain().length);
 	}

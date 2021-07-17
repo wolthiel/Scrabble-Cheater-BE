@@ -9,25 +9,27 @@ import java.io.FileNotFoundException;
 public class Dictionary {
 	File f;
 	int wordsCounter = 0;
+	HashTable ht;
+	
 	public static void main(String[] args) throws FileNotFoundException {
 		Dictionary d = new Dictionary();
 	}
 	
 	public Dictionary() throws FileNotFoundException {
-	f = new File("C:\\Users\\RuthW\\Desktop\\test.txt");
+//	f = new File("C:\\Users\\thiel\\Downloads\\code\\day4\\code\\dictwords.txt");7LetterWords.txt
+	f = new File("C:\\Users\\RuthW\\Desktop\\dictwords.txt");
 	Scanner myReader = new Scanner(f);
+	ht = new HashTable(100000007);
 	while(myReader.hasNextLine())
 		{
 		String data = myReader.nextLine();
 		wordsCounter += 1;
-		System.out.println(data);
+		//System.out.println(data);
+		put(data);
 		}
 	myReader.close();
 	System.out.println("There are " + wordsCounter + " words stored in the list.");
-	}
-	
-	public String getPermutation(String input) {
-		return "hallo";
+	System.out.println(Arrays.toString( lookup("Actress")));
 	}
 	
 	public String[] longestChain() {
@@ -36,7 +38,13 @@ public class Dictionary {
 	}
 	
 	public void put (String input) {
-		
+		ht.put(getHashValue(input), input);
+	}
+	
+	public String[] lookup (String input) {
+		int key = getHashValue (input);
+		String[] result = ht.get(key);
+		return result;
 	}
 		
 	public static int getHashValue (String key) {
@@ -44,7 +52,7 @@ public class Dictionary {
 		// kann diese gelöscht werden
 		char[] letters = key.toUpperCase().toCharArray();
 		Arrays.sort(letters);
-		System.out.println(letters);
+		
 		
 		// converts key in int -> normalizes the value of the chars
 		int hashValue = 0;
