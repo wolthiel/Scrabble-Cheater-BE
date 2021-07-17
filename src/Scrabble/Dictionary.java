@@ -35,7 +35,7 @@ public class Dictionary {
 		while(myReader.hasNextLine())
 			{
 			String data = myReader.nextLine();
-			if (data.length() == 7 ) {
+			if (data.length() == limiter ) {
 				wordsCounter += 1;
 				put(data);
 				}
