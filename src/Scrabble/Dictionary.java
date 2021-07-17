@@ -31,8 +31,8 @@ public class Dictionary {
 	}
 	
 	public String[] longestChain() {
-		String[] returnString = {"Hallo", "Du da!"};
-		return returnString;
+		String[] result = ht.getLongestList();
+		return result;
 	}
 	
 	public void put (String input) {
@@ -47,7 +47,7 @@ public class Dictionary {
 		
 	public static int getHashValue (String key) {
 		//wenn die Normalisierungsmethode bereits geschrieben ist, 
-		// kann diese gelöscht werden
+		// kann diese gelÃ¶scht werden
 		char[] letters = key.toUpperCase().toCharArray();
 		Arrays.sort(letters);
 		
