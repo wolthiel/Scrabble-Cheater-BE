@@ -18,7 +18,7 @@ public class Dictionary {
 	public Dictionary() throws FileNotFoundException {
 	f = new File("C:\\Users\\thiel\\Downloads\\code\\day4\\code\\dictwords.txt");
 	Scanner myReader = new Scanner(f);
-	ht = new HashTable(13513);
+	ht = new HashTable(100000007);
 	while(myReader.hasNextLine())
 		{
 		String data = myReader.nextLine();
@@ -28,7 +28,7 @@ public class Dictionary {
 		}
 	myReader.close();
 	System.out.println("There are " + wordsCounter + " words stored in the list.");
-	System.out.println(Arrays.toString( lookup("Ball")));
+	System.out.println(Arrays.toString( lookup("Sicily")));
 	}
 	
 	public String[] longestChain() {
