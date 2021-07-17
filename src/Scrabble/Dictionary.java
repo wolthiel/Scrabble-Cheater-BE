@@ -25,7 +25,7 @@ public class Dictionary {
 		System.out.println(data);
 		}
 	myReader.close();
-	ht =  = new HashTable(wordsCounter);
+	ht = new HashTable(wordsCounter);
 	System.out.println("There are " + wordsCounter + " words stored in the list.");
 	}
 	
