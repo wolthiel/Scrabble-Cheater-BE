@@ -11,7 +11,9 @@ public class ScrabbleCheater {
 			dictionary.put(name);
 		}
 		
-		System.out.println(Arrays.toString( dictionary.lookup("Actress")));
+		String SEARCH_TERM = "Actress";
+		
+		System.out.println("The search term '" + SEARCH_TERM + "' has following results: " + Arrays.toString( dictionary.lookup(SEARCH_TERM)));
 		System.out.println("The longest chain is "+ Arrays.toString( dictionary.longestChain()));
 		System.out.println("It's length is "+ dictionary.longestChain().length );
 //		System.out.println(dictionary.getPermutation("adeelrt"));
