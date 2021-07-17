@@ -39,7 +39,7 @@ public class HashTable {
 		int superkey = 0;
 		int superlength = 0;
 		for (int i = 0; i < size; i++) {
-			if (hm[i].size() > superlength) {
+			if (hm[i] != null && hm[i].size() > superlength) {
 				superkey = i;
 				superlength = hm[i].size();
 			}

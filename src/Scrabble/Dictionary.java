@@ -29,11 +29,13 @@ public class Dictionary {
 	myReader.close();
 	System.out.println("There are " + wordsCounter + " words stored in the list.");
 	System.out.println(Arrays.toString( lookup("Actress")));
+	System.out.println("The longest chain is "+ Arrays.toString( longestChain()));
+	System.out.println("It's length is "+ longestChain().length );	
 	}
 	
 	public String[] longestChain() {
-		String[] returnString = {"Hallo", "Du da!"};
-		return returnString;
+		String[] result = ht.getLongestList();
+		return result;
 	}
 	
 	public void put (String input) {
