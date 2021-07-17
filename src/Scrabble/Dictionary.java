@@ -14,17 +14,6 @@ public class Dictionary {
 	}
 	
 	public Dictionary() throws FileNotFoundException {
-	f = new File("C:\\Users\\RuthW\\Desktop\\test.txt");
-	Scanner myReader = new Scanner(f);
-	while(myReader.hasNextLine())
-		{
-		String data = myReader.nextLine().toLowerCase();		
-		wordsCounter += 1;		
-		System.out.println(data);		
-		}
-	}
-	
-	public Dictionary() throws FileNotFoundException {
 	f = new File("");
 	Scanner myReader = new Scanner(f);
 	while(myReader.hasNextLine())
