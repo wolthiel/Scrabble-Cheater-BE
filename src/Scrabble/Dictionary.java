@@ -24,7 +24,7 @@ public class Dictionary {
 		put(data);
 		}
 	myReader.close();
-	//System.out.println("There are " + wordsCounter + " words stored in the list.");
+	System.out.println("There are " + wordsCounter + " words stored in the list.");
 	}
 	
 	public Dictionary(int limiter) throws FileNotFoundException {
@@ -41,7 +41,7 @@ public class Dictionary {
 				}
 			}
 		myReader.close();
-		//System.out.println("There are " + wordsCounter + " words stored in the list.");
+		System.out.println("There are " + wordsCounter + " words stored in the list.");
 		}
 	
 	public String[] longestChain() {
