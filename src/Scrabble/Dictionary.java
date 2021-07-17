@@ -28,7 +28,7 @@ public class Dictionary {
 		}
 	myReader.close();
 	System.out.println("There are " + wordsCounter + " words stored in the list.");
-	System.out.println(Arrays.toString( lookup("Sicily")));
+	System.out.println(Arrays.toString( lookup("Actress")));
 	}
 	
 	public String[] longestChain() {
