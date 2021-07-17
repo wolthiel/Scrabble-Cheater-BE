@@ -12,8 +12,6 @@ public class Dictionary {
 	HashTable ht;
 	
 	public Dictionary() throws FileNotFoundException {
-//	f = new File("C:\\Users\\thiel\\Downloads\\code\\day4\\code\\dictwords.txt");7LetterWords.txt
-//	f = new File("C:\\Users\\RuthW\\Desktop\\dictwords.txt");
 	f = new File("src\\Scrabble\\dictwords.txt");
 
 	Scanner myReader = new Scanner(f);
@@ -26,9 +24,25 @@ public class Dictionary {
 		put(data);
 		}
 	myReader.close();
-	System.out.println("There are " + wordsCounter + " words stored in the list.");
-//	System.out.println(Arrays.toString( lookup("Actress")));
+	//System.out.println("There are " + wordsCounter + " words stored in the list.");
 	}
+	
+	public Dictionary(int limiter) throws FileNotFoundException {
+		f = new File("src\\Scrabble\\dictwords.txt");
+
+		Scanner myReader = new Scanner(f);
+		ht = new HashTable(100000007);
+		while(myReader.hasNextLine())
+			{
+			String data = myReader.nextLine();
+			if (data.length() == 7 ) {
+				wordsCounter += 1;
+				put(data);
+				}
+			}
+		myReader.close();
+		//System.out.println("There are " + wordsCounter + " words stored in the list.");
+		}
 	
 	public String[] longestChain() {
 		String[] result = ht.getLongestList();
