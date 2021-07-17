@@ -9,6 +9,8 @@ import java.io.FileNotFoundException;
 public class Dictionary {
 	File f;
 	int wordsCounter = 0;
+	HashTable ht = new HashTable();
+	
 	public static void main(String[] args) throws FileNotFoundException {
 		Dictionary d = new Dictionary();
 	}
@@ -26,10 +28,6 @@ public class Dictionary {
 	System.out.println("There are " + wordsCounter + " words stored in the list.");
 	}
 	
-	public String getPermutation(String input) {
-		return "hallo";
-	}
-	
 	public String[] longestChain() {
 		String[] returnString = {"Hallo", "Du da!"};
 		return returnString;
@@ -37,6 +35,12 @@ public class Dictionary {
 	
 	public void put (String input) {
 		
+	}
+	
+	public String[] lookup (String input) {
+		int key = getHashValue (input);
+		String[] result = ht.get(key);
+		return result;
 	}
 		
 	public static int getHashValue (String key) {

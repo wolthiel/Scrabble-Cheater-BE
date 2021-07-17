@@ -3,12 +3,12 @@ package Scrabble;
 import java.util.*;
 
 public class HashTable {
-	Hashtable<String, LinkedList> hm ;
+	Hashtable<Integer, LinkedList> hm ;
 	public HashTable() {
-		Hashtable<String, LinkedList> hm = new Hashtable<String, LinkedList>();
+		Hashtable<Integer, LinkedList> hm = new Hashtable<Integer, LinkedList>();
 	}
 	
-	public void put(String key, String object) {
+	public void put(int key, String object) {
 		if (hm.containsKey(key)) {
 			searchList(key, object);
 		}
@@ -17,14 +17,14 @@ public class HashTable {
 		}
 	}
 	
-	public String[] get(String key) {
+	public String[] get(Integer key) {
 		LinkedList<String> list = hm.get(key);
 		String[] returnArray = (String[]) list.toArray();
 		return returnArray;
 	}
 	
 	public String[] getLongestList() {
-		String[] superkey = {""};
+		int[] superkey = {0};
 		int[] superlength = {0};
 		hm.forEach((k, v) -> {
 			if (v.size() > superlength[0]) {
@@ -35,7 +35,7 @@ public class HashTable {
 		return get(superkey[0]);
 	}
 	
-	private void searchList(String key, String object) {
+	private void searchList(int key, String object) {
 		LinkedList<String> list = hm.get(key);
 		if (!list.contains(object)) {
 			list.addLast(object);
@@ -43,7 +43,7 @@ public class HashTable {
 		hm.put(key,list);
 	}
 	
-	private void createEntry(String key, String object) {
+	private void createEntry(int key, String object) {
 		LinkedList<String> list = new LinkedList<String>();
 		list.add(object);
 		hm.put(key, list);
