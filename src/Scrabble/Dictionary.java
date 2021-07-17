@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 public class Dictionary {
 	File f;
 	int wordsCounter = 0;
-	HashTable ht = new HashTable();
+	HashTable ht = new HashTable(100000);
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		Dictionary d = new Dictionary();
