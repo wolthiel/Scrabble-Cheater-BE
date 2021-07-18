@@ -9,8 +9,11 @@ public class ScrabbleCheater {
 		int STRING_LIMITER = 7;
 		
 		Dictionary dictionary = new Dictionary();
-		
+		dictionary.ht.getEntry();
+		dictionary.ht.getCollisions();
 		System.out.println("The search term '" + SEARCH_TERM + "' has following results: " + Arrays.toString( dictionary.lookup(SEARCH_TERM)));
+		
+		
 		System.out.println("The longest chain is "+ Arrays.toString( dictionary.longestChain()));
 		System.out.println("It's length is "+ dictionary.longestChain().length );
 		
@@ -23,5 +26,4 @@ public class ScrabbleCheater {
 		System.out.println("The longest chain is "+ Arrays.toString( limitedDic.longestChain()));
 		System.out.println("It's length is "+ limitedDic.longestChain().length );
 	}
-
 }

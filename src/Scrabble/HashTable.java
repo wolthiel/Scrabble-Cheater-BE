@@ -3,16 +3,24 @@ package Scrabble;
 import java.util.*;
 
 public class HashTable {
+	
 	LinkedList<String>[] hm;
 	int size;
+	int countEntry;
+	int collision;
+	
+	@SuppressWarnings("unchecked")
 	public HashTable(int numberOfKeys) {
 		size = numberOfKeys;
 		hm = new LinkedList[size];
+		countEntry = 0;
+		collision = 0;
 	}
 	
 	public void put(int key, String object) {
 		if (hm[index(key)] != null) {
 			searchList(index(key), object);
+			collision++;
 		}
 		else {
 			createEntry(index(key),object);
@@ -56,6 +64,7 @@ public class HashTable {
 		}
 	
 	private void createEntry(int key, String object) {
+		countEntry++;
 		LinkedList<String> list = new LinkedList<String>();
 		list.add(object);
 		hm[key] = list;
@@ -65,6 +74,12 @@ public class HashTable {
 		int result = Math.abs(key) % size;
 		return result;
 	}
+	
+	public void getEntry() {
+		System.out.println("There are " + countEntry + " entries in the table.");
+	}
+	
+	public void getCollisions() {
+		System.out.println("There are " + collision + " collisions in the table.\n");
+	}
 }
-
-
