@@ -15,7 +15,7 @@ public class Dictionary {
 	f = new File("src\\Scrabble\\dictwords.txt");
 
 	Scanner myReader = new Scanner(f);
-	ht = new HashTable(100000007); //Prime number from: https://www.walter-fendt.de/html5/mde/primenumbers_de.htm
+	ht = new HashTable(1000037); //Prime number from: https://www.walter-fendt.de/html5/mde/primenumbers_de.htm
 	while(myReader.hasNextLine())
 		{
 		String data = myReader.nextLine();
