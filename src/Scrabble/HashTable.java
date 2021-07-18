@@ -30,7 +30,7 @@ public class HashTable {
 	public String[] get(Integer key) {
 		// Help through https://www.tutorialspoint.com/how-to-convert-linkedlist-to-array-in-java
 		if (hm[index(key)] == null) { 
-			String[] result = {"Now words found"};
+			String[] result = {"No words found"};
 			return result;
 		}
 		LinkedList<String> list = hm[index(key)];
