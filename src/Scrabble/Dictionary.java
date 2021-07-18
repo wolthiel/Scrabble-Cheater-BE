@@ -12,7 +12,7 @@ public class Dictionary {
 	HashTable ht;
 	
 	public Dictionary() throws FileNotFoundException {
-	f = new File("dictwords.txt");
+	f = new File("src\\Scrabble\\dictwords.txt");
 
 	Scanner myReader = new Scanner(f);
 	ht = new HashTable(100000007); //Prime number from: https://www.walter-fendt.de/html5/mde/primenumbers_de.htm
@@ -28,7 +28,7 @@ public class Dictionary {
 	}
 	
 	public Dictionary(int limiter) throws FileNotFoundException {
-		f = new File("dictwords.txt");
+		f = new File("src\\Scrabble\\dictwords.txt");
 
 		Scanner myReader = new Scanner(f);
 		ht = new HashTable(100000007);

@@ -21,6 +21,8 @@ public class ScrabbleCheater {
 		System.out.println("The following dictionary is limited to words with the length of " + STRING_LIMITER);
 		
 		Dictionary limitedDic = new Dictionary(STRING_LIMITER);
+		limitedDic.ht.getEntry();
+		limitedDic.ht.getCollisions();
 		
 		System.out.println("The search term '" + SEARCH_TERM + "' has following results: " + Arrays.toString( limitedDic.lookup(SEARCH_TERM)));
 		System.out.println("The longest chain is "+ Arrays.toString( limitedDic.longestChain()));
